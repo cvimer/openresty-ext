@@ -19,3 +19,6 @@
 [submodule "modules/nginx_tcp_proxy_module"]
 	path = modules/nginx_tcp_proxy_module
 	url = https://github.com/yaoweibin/nginx_tcp_proxy_module.git
+[submodule "modules/nginx-stream-upsync-module"]
+	path = modules/nginx-stream-upsync-module
+	url = https://github.com/xiaokai-wang/nginx-stream-upsync-module.git
