@@ -28,6 +28,8 @@ RUN make && make install
 
 WORKDIR /usr/local/openresty/nginx
 
+ADD ./nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
+
 ENTRYPOINT ["/usr/local/openresty/nginx/sbin/nginx"]
 
 CMD ["-g", "daemon off;"]
