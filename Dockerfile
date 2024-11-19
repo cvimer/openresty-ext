@@ -29,6 +29,7 @@ RUN make && make install
 WORKDIR /usr/local/openresty/nginx
 
 ADD ./nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
+RUN chown -R nobody:nogroup /usr/local/openresty/nginx/logs
 
 ENTRYPOINT ["/usr/local/openresty/nginx/sbin/nginx"]
 
