@@ -20,6 +20,9 @@ WORKDIR /usr/local/src/openresty-${RESTY_VERSION}
 RUN patch -d bundle/nginx-${NGX_VERSION}/ -p 1 < ../ngx_http_proxy_connect_module/patch/proxy_connect_rewrite_102101.patch
 
 RUN ./configure \
+    --with-http_realip_module \
+    --with-stream_realip_module \
+    --with-http_slice_module \
     --add-module=../ngx_http_proxy_connect_module \
     --add-module=../nginx-upsync-module \
     --add-module=../nginx-stream-upsync-module
